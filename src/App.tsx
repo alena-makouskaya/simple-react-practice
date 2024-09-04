@@ -7,19 +7,25 @@ import { Rating } from "./components/Rating/Rating";
 function App() {
   return (
     <div className="App">
-      <AppTitle title={"This is APP component 01"} />
-      <AppTitle title={"This is APP component 02"} />
+      <PageTitle title={"This is APP component 01"} />
+      <PageTitle title={"This is APP component 02"} />
 
       <Rating value={1} />
       <Rating value={2} />
       <Rating value={3} />
       <Rating value={0} />
-      <Accordion />
+
+      <Accordion titleValue="Menu"/>
+      <Accordion titleValue="Users"/>
     </div>
   );
 }
 
-function AppTitle(props: any) {
+type PageTitlePropsType = {
+  title: string
+}
+
+function PageTitle(props: PageTitlePropsType) {
   console.log("AppTitle rendering");
   return <h2>{props.title}</h2>;
 }

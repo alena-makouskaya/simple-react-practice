@@ -1,6 +1,7 @@
 type AccordionPropsType = {
   titleValue: string;
   collapsed: boolean;
+
 };
 
 export function Accordion(props: AccordionPropsType) {

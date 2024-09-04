@@ -1,54 +1,27 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import { Accordion } from "./components/Accordion/Accordion";
+import { Rating } from "./components/Rating/Rating";
 
 function App() {
   return (
     <div className="App">
-      <AppTitle />
+      <AppTitle title={"This is APP component 01"} />
+      <AppTitle title={"This is APP component 02"} />
 
-      <Rating />
+      <Rating value={1} />
+      <Rating value={2} />
+      <Rating value={3} />
+      <Rating value={0} />
       <Accordion />
     </div>
   );
 }
 
-function AppTitle() {
-  console.log("AppTitle rendering")
-  return <h2>This is APP component</h2>;
-}
-
-function Rating() {
-  console.log("Rating rendering")
-  return (
-    <div>
-      <Star />
-      <Star />
-      <Star />
-      <Star />
-      <Star />
-    </div>
-  );
-}
-
-function Star() {
-  console.log("Star rendering")
-  return <span>Star </span>
-}
-
-function Accordion() {
-  console.log("Accordion rendering")
-  return (
-    <div>
-      <h3>Menu</h3>
-
-      <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-      </ul>
-    </div>
-  );
+function AppTitle(props: any) {
+  console.log("AppTitle rendering");
+  return <h2>{props.title}</h2>;
 }
 
 export default App;

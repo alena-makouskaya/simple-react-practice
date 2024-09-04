@@ -3,20 +3,16 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Accordion } from "./components/Accordion/Accordion";
 import { Rating } from "./components/Rating/Rating";
+import { OnOff } from "./components/OnOff/OnOff";
+import { UncontrolledAccordion } from "./components/UncontrolledAccordion/UncontrolledAccordion";
 
 function App() {
   return (
     <div className="App">
-      <PageTitle title={"This is APP component 01"} />
-      <PageTitle title={"This is APP component 02"} />
+      <OnOff />
+      
 
-      <Rating value={1} />
-      <Rating value={2} />
-      <Rating value={3} />
-      <Rating value={0} />
-
-      <Accordion titleValue="Menu" collapsed={true}/>
-      <Accordion titleValue="Users" collapsed={false}/>
+      <UncontrolledAccordion titleValue="Menu"/>
     </div>
   );
 }

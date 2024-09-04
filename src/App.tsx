@@ -25,11 +25,6 @@ function App() {
       <div> - / - / - / - / - / - / - / - </div>
       <UncontrolledRating />
 
-      <Accordion
-        titleValue="Accordion"
-        collapsed={accordionCollapsed}
-        onChange={() => setAccordionСollapsed(!accordionCollapsed)}
-      />
 
       <div> - / - / - / - / - / - / - / - </div>
 
